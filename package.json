@@ -1,0 +1,19 @@
+{
+  "name": "RSXP-Hackathon-Backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/D4rkM/RSXP-Hackathon-Backend.git",
+  "author": "lliuti <lucas_liuti@hotmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "dev:debug": "nodemon --inspect src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.1",
+    "sucrase": "^3.10.1"
+  }
+}
