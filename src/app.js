@@ -1,4 +1,5 @@
 import express from 'express';
+import { join } from 'path';
 import routes from './routes';
 
 class App {
@@ -6,6 +7,10 @@ class App {
     this.server = express();
     this.middlewares();
     this.routes();
+
+    require('dotenv').config({
+      path: join(__dirname, '/.env')
+    })
   };
 
   middlewares() {
