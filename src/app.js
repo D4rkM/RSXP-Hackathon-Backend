@@ -10,8 +10,6 @@ class App {
     this.middlewares();
     this.routes();
 
-    this.server.use(cors());
-
     require('dotenv').config({
       path: join(__dirname, '/.env')
     })
@@ -19,6 +17,7 @@ class App {
 
   middlewares() {
     this.server.use(express.json());
+    this.server.use(cors());
   };
 
   routes() {

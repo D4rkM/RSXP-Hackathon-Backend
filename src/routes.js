@@ -1,7 +1,7 @@
 import { Router } from 'express';
 
 //@todo - implementar Watson
-//import WatsonController from './app/controllers/WatsonController';
+import WatsonController from './app/controllers/WatsonController';
 import MessageController from './app/controllers/MessageController';
 
 const routes = new Router();
@@ -11,5 +11,6 @@ routes.get('/', (req, res) => {
 });
 
 routes.post('/message', MessageController.store);
+routes.post('/watson', WatsonController.store);
 
 export default routes;
